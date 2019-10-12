@@ -3,7 +3,8 @@
   %article#main
     %header#glb_title
       #glb_title_container 
-        .bread パンくず
+        - breadcrumb :profile
+        = render 'layouts/breadcrumbs'
         .title_container
           %i.fas.fa-camera-retro　プロフィール設定
     #glb_body

@@ -10,8 +10,7 @@
       position: relative;
       border: 1px #ddd solid;
       #glb_title_container {
-        width: 990px;
-        margin: 0 auto;
+        @include breadcrumbs;
       }
       #user_header {
         padding: 12px 0;

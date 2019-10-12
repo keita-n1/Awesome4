@@ -3,6 +3,8 @@
   %article#main
     %header#glb_title
       #glb_title_container 
+        - breadcrumb :post
+        = render 'layouts/breadcrumbs'
         .title_container
           %i.fas.fa-camera-retro　コーディネート投稿
     #glb_body

@@ -8,8 +8,7 @@
       min-height: 133px;
       border-bottom: 1px #ddd solid;
       #glb_titlle_container {
-        width: 990px;
-        margin: 0 auto;
+        @include breadcrumbs;
         #users_header {
           margin-top: 22px;
           overflow: hidden;
