@@ -1,0 +1,258 @@
+.comments-index {
+  background: #f6f7f8;
+  #main {
+    padding: 54px 0 50px 0;
+    #gbl_title {
+      padding-top: 18px;
+      background: white;
+      min-height: 84px;
+      border-bottom: 1px #ddd solid;
+      position: relative;
+      border: 1px #ddd solid;
+      #gbl_title_container {
+        width: 990px;
+        margin: 0 auto;
+      }
+      #user_header {
+        padding: 12px 0;
+        .container {
+          width: 990px;
+          margin: 0 auto;
+          display: flex;
+          .avatar {
+            height: 48px;
+            img {
+              width: 48px;
+              height: 48px;
+              border-radius: 50%;
+            }
+          }
+          .content {
+            padding-left: 10px;
+            .name {
+              font-size: 20px;
+              line-height: 1.2;
+              max-width: 100%;
+            }
+            .meta {
+              .info {
+                padding-top: 4px;
+                display: flex;
+                font-size: 12px;
+                position: absolute;
+                li:nth-child(2) {
+                  margin-left: 18px;
+                }
+                li:nth-child(2):before {
+                  content: "";
+                  width: 1px;
+                  height: 14px;
+                  background: #ddd;
+                  position: absolute;
+                  left: 50px;
+                  top: 30%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #gbl_body {
+      padding-top: 20px;
+      width: 990px;
+      margin: 0 auto;
+      #content_container {
+        overflow: hidden;
+        .comment_container {
+          width: 414px;
+          float: right;
+          min-height: 500px;
+          background:white;
+          border-radius: 20px;
+          border: 1px #ddd solid;
+          .like_container {
+            display: flex;
+            margin: 10px;
+            .awesome {
+              font-size: 22px;
+              line-height: 1.2;
+              color: #99FFCC;
+              font-weight: bold;
+            }
+            .far {
+              font-size: 18px;
+              line-height: 1.2;
+              margin: 3px 0 0 30px;
+              color: #FF6699;
+              font-weight: bold;
+            }
+            .like {
+              font-size: 18px;
+              line-height: 1.2;
+              margin-top: 3px;
+
+            }
+          }
+          //吹き出し文
+          .comments {
+            padding: 20px 10px;
+            max-width: 394px;
+            margin: 15px auto;
+            text-align: right;
+            font-size: 14px;
+
+            .balloon6 {
+              width: 100%;
+              margin: 10px 0;
+              overflow: hidden;
+            }
+            .balloon6 .faceicon {
+              float: left;
+              margin-right: -50px;
+              width: 40px;
+            }
+            .balloon6 .faceicon img{
+              width: 100%;
+              height: auto;
+              border-radius: 50%;
+            }
+            .balloon6 .chatting {
+              width: 100%;
+              text-align: left;
+            }
+            .says {
+              display: inline-block;
+              position: relative; 
+              margin: 0 0 0 50px;
+              padding: 10px;
+              max-width: 250px;
+              border-radius: 12px;
+              background: #FFCCCC;
+            }
+            .says:after {
+              content: "";
+              display: inline-block;
+              position: absolute;
+              top: 3px; 
+              left: -19px;
+              border: 8px solid transparent;
+              border-right: 18px solid #FFCCCC;
+              -webkit-transform: rotate(35deg);
+              transform: rotate(35deg);
+            }
+            .says p {
+              margin: 0;
+              padding: 0;
+            }
+            /*以下、③右側の緑コメント*/
+            .mycomment {
+              margin: 10px 0;
+            }
+            .mycomment p {
+              display: inline-block;
+              position: relative; 
+              margin: 0 10px 0 0;
+              padding: 8px;
+              max-width: 250px;
+              border-radius: 12px;
+              background: #99FF99;
+              font-size: 15px;
+            }
+            .mycomment p:after {
+              content: "";
+              position: absolute;
+              top: 3px; 
+              right: -19px;
+              border: 8px solid transparent;
+              border-left: 18px solid #99FF99;
+              -webkit-transform: rotate(-35deg);
+              transform: rotate(-35deg);
+            }
+          }
+        }
+        .content_sub {
+          width: 558px;
+          float: left;
+          .coodinate_info {
+            background: white;
+            border: 1px #ddd solid;
+            padding: 20px 0 13px 20px;
+            &__title {
+              font-size: 14px;
+              font-weight: bold;
+              line-height: 1.5;
+            }
+            ul {
+              display: flex;
+              margin-top: 10px;
+              li {
+                font-size: 11px;
+                margin-right: 10px;
+              }
+            }
+            .content {
+              margin-top: 10px;
+              padding:  20px 0 13px 20px;
+              font-size: 14px;
+              border-top: 1px #ddd solid;
+              word-break: break-all;
+            }
+          }
+          .coodinate_more {
+            margin-top: 25px;
+            &__title {
+              font-size: 13px;
+              font-weight: bold;
+            }
+            ul {
+              display: flex;
+              .more_img_1 {
+                border: 1px #ddd solid;
+                margin-top: 18px;
+                width: 174px;
+                background: white;
+                .like_container {
+                  display: flex;
+                  .far {
+                    font-size: 18px;
+                    line-height: 1.2;
+                    margin: 3px 10px 3px 6px;
+                    color: #FF6699;
+                    font-weight: bold;
+                  }
+                }
+              }
+              .more_img_2 {
+                border: 1px #ddd solid;
+                margin: 18px 0 0 18px;
+                width: 174px;
+                background: white;
+                .like_container {
+                  display: flex;
+                  .far {
+                    font-size: 18px;
+                    line-height: 1.2;
+                    margin: 3px 10px 3px 6px;
+                    color: #FF6699;
+                    font-weight: bold;
+                  }
+                }
+              }
+            }
+            .more {
+              margin-top: 25px;
+              float: right;
+              font-size: 13px;
+              .over {
+                text-decoration: none;
+                color: #888;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
