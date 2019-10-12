@@ -3,6 +3,8 @@
   %article#glb_main
     %header#glb_title
       #glb_titlle_container
+        - breadcrumb :user, @user
+        = render 'layouts/breadcrumbs'
         #users_header
           #users_sub
             .image
