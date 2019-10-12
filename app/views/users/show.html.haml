@@ -1,0 +1,40 @@
+= render 'header/header'
+.users-show
+  %article#glb_main
+    %header#glb_title
+      #glb_titlle_container
+        #users_header
+          #users_sub
+            .image
+              - if @user.profile_image.present?
+                = image_tag @user.profile_image.to_s, class: 'img', width: '148', height: '148'
+              - else
+                = image_tag "http://www.ark-wave.co.jp/contnt/bowler/img/no_image.jpg", class: 'img', width: '148', height: '148'
+          #users_main
+            %section.intro
+              %h1.name #{@user.name}
+              -if current_user.id == @user.id
+                = link_to '編集する', edit_user_path, class: 'link'
+              .meta
+                %ul.info
+                  %li #{@user.height}cm
+                  %li #{@user.gender}
+            %section.profile
+              %p.profile__detail #{@user.profile}
+    #glb_body
+      .current_user
+        .current_user__number #{@user.coordinates.count}
+        %span コーディネート
+      .content
+        %ul.list_container
+          %li.list
+            .list__image
+              = image_tag '//cdn.wimg.jp/profile/o3v49k/20180630190139161_200.jpg', class: 'img', width: '230', height: '308'
+            .list__meta
+              %i.far.fa-heart 111
+          %li.list
+            .list__image
+              = image_tag '//cdn.wimg.jp/profile/o3v49k/20180630190139161_200.jpg', class: 'img', width: '230', height: '308'
+            .list__meta
+              %i.far.fa-heart 111 
+              
