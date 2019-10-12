@@ -1,0 +1,67 @@
+.coordinates-index {
+  background: #f6f7f8;
+  height: 2000px;
+  header {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background: white;
+    .container {
+      position: relative;
+      width: 990px;
+      height: 54px;
+      margin: 0 auto;
+      .logo {
+        position: absolute;
+        left: 50%;
+        margin: 0 0 0 -75px;
+        width: 150px;
+        height: 54px;
+        .icon_font {
+          text-decoration: none;
+          color: black;
+          font-weight: bold;
+          line-height: 54px;
+          font-size: 24px;
+        }
+      }
+      .no_login {
+        position: absolute;
+        right: 0;
+        top: 16px;
+        text-align: right;
+        .login {
+          display: inline-block;
+          .fa-user {
+            color: black;
+            font-weight: 400;
+            font-size: 14px;
+          }
+          .fa-user:before {
+            margin-right: 7px;
+          }
+        }
+        .regist {
+          display: inline-block;
+          margin-left: 27px;
+          .registration {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+          }
+        }
+        .regist:before {
+          content: "";
+          width: 1px;
+          height: 14px;
+          background: #ddd;
+          position: absolute;
+          left: 90px;
+          top: 50%;
+          display: block;
+          margin: -7px 0 0 0;
+        }
+      }
+    }
+  }
+}
