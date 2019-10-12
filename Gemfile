@@ -65,6 +65,6 @@ gem 'compass-rails', '3.1.0'
 gem 'sprockets', '3.7.2'
 gem "haml-rails", "~> 2.0" 
 gem 'erb2haml'
-gem 'jquery-rails' 
 gem 'jquery-rails'
 gem "font-awesome-rails"
+gem 'devise'
