@@ -1,0 +1,217 @@
+.coordinates-new {
+  background: $glay;
+  #main {
+    padding: 54px 0 0 0;
+    #glb_title {
+      padding: 18px 0 0 0;
+      background: white;
+      min-height: 123px;
+      border: 1px #ddd solid;
+      position: relative;
+      #glb_title_container {
+
+      }
+    }
+    #glb_body {
+      padding-bottom: 50px;
+      width: 990px;
+      margin: 0 auto;
+      .content {
+        margin: 20px auto 0 auto;
+        width: 842px;
+        .upload_container {
+          border: 1px $orange solid;
+          border-radius: 4px;
+          padding-bottom: 30px;
+          width: 840px;
+          .upload_img {
+            padding: 50px 30px 20px 30px;
+            overflow: hidden;
+            .section_sub {
+              width: 180px;
+              float: left;
+              text-align: right;
+              display: flex;
+              margin-right: 65px;
+              h2 {
+                font-size: 16px;
+                font-weight: bold;
+                color: $orange;
+              }
+              span {
+                margin-left: 10px;
+                font-size: 10px;
+                color: red;
+                line-height: 24px;
+              }
+            }
+            #img_field {
+              font-size: 15px;
+              margin-top: 10px;
+              padding: 5px 8px;
+              border: solid 1px $orange;
+              color: #666;
+              position: relative;
+              padding: 0;
+              border-radius: 5px;
+              cursor: pointer;
+              width: 400px;
+              height: 250px;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-color: #fff;
+              overflow: hidden;
+              box-sizing: border-box;
+              transition: 0.3s ease-out;
+            }
+            #img_field i {
+              font-size: 100px;
+              color: #aaa;
+              line-height: 250px;
+              transition: 0.3s ease-out;
+            }
+            #img_field i.add {
+              display: none;
+              font-size: 50px;
+              position: absolute;
+              top: -90px;
+              right: 15px;
+            }
+            #img_field:hover {
+              background-color: #EDBC6C;
+              transition: 0.3s ease-out;
+              opacity: 0.9;
+            }
+            #img_field:hover i {
+              transition: 0.3s ease-out;
+              display: block;
+              color: #fff;
+            }
+          }
+          .secondary {
+            overflow: hidden;
+            .coodinate_detail {
+              padding: 20px 35px;
+              .section_sub {
+                width: 144px;
+                float: left;
+                text-align: right;
+                h2 {
+                  font-size: 16px;
+                  font-weight: bold;
+                  color: $orange;
+                }
+              }
+              .section_main {
+                width: 530px;
+                float: right;
+                .list:first-child {
+                  margin-top: 0;
+                }
+                .list {
+                  clear: both;
+                  margin-top: 30px;
+                }
+                .summary {
+                  h3 {
+                    font-size: 14px;
+                    line-height: 24px;
+                  }
+                  .detail {
+                    margin-top: 5px;
+                    .coodinate_summary {
+                      width: 528px;
+                      height: 150px;
+                      font-size: 16px;
+                      padding: 8px;
+                      border:1px #EDBC6C solid;
+                    }
+                  }
+                }
+                // .sex {
+                //   h3 {
+                //     font-size: 14px;
+                //     display: inline-block;
+                //   }
+                //   span {
+                //     @include coordinate_list_span;
+                //   }
+                //   .detail {
+                //     margin-top: 5px;
+                //     select {
+                //       border: 1px #ddd solid;
+                //     }
+                //     #upload_sex {
+                //       @include coordinate_list_upload;
+                //     }
+                //   }
+                // }
+                // .height {
+                //   h3 {
+                //     font-size: 14px;
+                //     display: inline-block;
+                //   }
+                //   span {
+                //     @include coordinate_list_span;
+                //   }
+                //   .detail {
+                //     margin-top: 5px;
+                //     select {
+                //       border: 1px #ddd solid;
+                //     }
+                //     #upload_height {
+                //       @include coordinate_list_upload;
+                //     }
+                //   }
+                // }
+                // .age {
+                //   h3 {
+                //     font-size: 14px;
+                //     display: inline-block;
+                //   }
+                //   span {
+                //     @include coordinate_list_span;
+                //   }
+                //   .detail {
+                //     margin-top: 5px;
+                //     select {
+                //       border: 1px #ddd solid;
+                //     }
+                //     #upload_age {
+                //       @include coordinate_list_upload;
+                //     }
+                //   }
+                // }
+              }
+            }
+          }
+        }
+        .processing {
+          margin: 40px auto;
+          width: 240px;
+          .upload {
+            list-style: none;
+            text-align: center;
+            .over {
+              display: inline-block;
+              padding: 0.5em 1em;
+              text-decoration: none;
+              border-radius: 4px;
+              color: #ffffff;
+              background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+              box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+              border-bottom: solid 3px #c58668;
+            }
+            .over:active {
+              -webkit-transform: translateY(4px);
+              transform: translateY(4px);
+              box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
