@@ -5,68 +5,55 @@
       #glb_title_container 
         .bread パンくず
         .title_container
-          %i.fas.fa-camera-retro　コーディネート投稿
+          %i.fas.fa-camera-retro　プロフィール設定
     #glb_body
       .content
-        = form_with(model: @user, local: true) do |f|
+        = form_with model: @user, local: true do |f|
           .upload_container
             %section.upload_img
               .section_sub
-                %h2 コーディネート画像
+                %h2 プロフィール画像
                 %span ※
-              .section_main
-                .sub
-                  .img_box
-                    %span NO IMAGE
-                .main
-                  %p.select 写真をアップロード
+              // id "file"で、fileとdivを紐付けクリック時に連動
+              #img_field{:onclick => "$('#file').click()"}
+                // 画像があるときは画像を表示する
+                - if @user.profile_image.present?
+                  = image_tag @user.profile_image.to_s
+                - else
+                  %i.fas.fa-image
+                  %i.fas.fa-file-upload.add
+              // id "file"をつけ、「display:none;」で隠す
+              = f.file_field :profile_image, class: "image", style: "display:none;", id: "file"
             .secondary
               .coodinate_detail
                 .section_sub
-                  %h2 コーディネート詳細
+                  %h2 プロフィール詳細
                 .section_main
                   .list.summary
-                    %h3 コーディネート紹介文
+                    %h3 プロフィール紹介文
                     .detail
-                      = f.text_area :coodinate_summary, class: "coodinate_summary"
+                      = f.text_area :profile, class: "coodinate_summary"
+                  .list.name
+                    %h3 名前
+                    %span ※
+                    .detail
+                      = f.text_field :name
                   .list.sex
                     %h3 性別
                     %span ※
                     .detail
-                      %select#upload_sex{name: "upload_sex"}
-                        %option{value: "0"} 選択してください
-                        %option{value: "1"} MEN
-                        %option{value: "2"} WOMEN
+                      = f.select :gender, ["MEN", "WOMEN"], prompt: "選択してください"
                   .list.height
                     %h3 身長
                     %span ※
                     .detail
-                      %select#upload_height{name: "upload_height"}
-                        %option{value: "0"} 選択してください
-                        %option{value: "1"} 140cm
-                        %option{value: "2"} 145cm
-                        %option{value: "3"} 150cm
-                        %option{value: "4"} 155cm
-                        %option{value: "5"} 160cm
-                        %option{value: "6"} 165cm
-                        %option{value: "7"} 170cm
-                        %option{value: "8"} 175cm
-                        %option{value: "9"} 180cm
-                        %option{value: "10"} 185cm
-                        %option{value: "11"} 190cm
+                      = f.select :height, ["140", "145", "150", "155", "160", "165", "170", "175", "180", "185", "190"], prompt: "選択してください"
                   .list.age
                     %h3 年齢
                     %span ※
                     .detail
-                      %select#upload_age{name: "upload_age"}
-                        %option{value: "0"} 選択してください
-                        %option{value: "1"} 10代
-                        %option{value: "2"} 20代
-                        %option{value: "3"} 30代
-                        %option{value: "4"} 40代
-                        %option{value: "5"} 50代
-                        %option{value: "6"} 60代
+                      = f.select :age, ["6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50"], prompt: "選択してください"
           .processing
             %li.upload
-              = link_to "UPLOAD", "/", class: "over" 
+              = f.submit value: "UPLOAD", class: "over"
               
