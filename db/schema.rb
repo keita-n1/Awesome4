@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_12_113804) do
+ActiveRecord::Schema.define(version: 2019_10_12_114154) do
+
+  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "comment", null: false
+    t.bigint "user_id"
+    t.bigint "coordinate_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["coordinate_id"], name: "index_comments_on_coordinate_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
 
   create_table "coordinates", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "image", null: false
@@ -39,5 +49,7 @@ ActiveRecord::Schema.define(version: 2019_10_12_113804) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "comments", "coordinates"
+  add_foreign_key "comments", "users"
   add_foreign_key "coordinates", "users"
 end
