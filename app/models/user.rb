@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :comments
   has_many :coordinates
+  mount_uploader :profile_image, ImageUploader
 end
