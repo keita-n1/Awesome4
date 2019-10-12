@@ -1,0 +1,11 @@
+@mixin breadcrumbs {
+  width: 990px;
+  margin: 0 auto;
+  .breadcrumbs {
+    font-size: 13px;
+    a {
+      text-decoration: none;
+      color: $button;
+    }
+  }
+}
