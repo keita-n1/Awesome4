@@ -1,0 +1,16 @@
+.registrations-new {
+  padding-top: 54px;
+  height: 800px;
+  background: $glay;
+  .container {
+    margin: 0 auto;
+    width: 990px;
+    h2 {
+      margin-top: 30px;
+    }
+    a {
+      text-decoration: none;
+      color: #00CCFF;
+    }
+  }
+}
