@@ -1,14 +1,5 @@
+= render 'header/header'
 .coordinates-index
-  %header#header
-    .container
-      %h1.logo
-        = link_to "Awesome", "/", class: "icon_font"
-      .no_login
-        %p.login
-          = link_to "/" do
-            %i.fas.fa-user ログイン
-        %p.regist
-          = link_to "新規会員登録", "/", class: "registration"
   %article#main
     #switch_sex_type
       %nav
