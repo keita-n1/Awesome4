@@ -1,0 +1,37 @@
+= render 'header/header'
+.coordinates-new
+  %article#main
+    %header#glb_title
+      #glb_title_container 
+        .title_container
+          %i.fas.fa-camera-retro　コーディネート投稿
+    #glb_body
+      .content
+        = form_with model: @coordinate, local: true do |f|
+          .upload_container
+            %section.upload_img
+              .section_sub
+                %h2 コーディネート画像
+                %span ※
+              // id "file"で、fileとdivを紐付けクリック時に連動
+              #img_field{:onclick => "$('#file').click()"}
+                // 画像があるときは画像を表示する
+                - if @coordinate.image.present?
+                  = image_tag @coodinate.image
+                - else
+                  %i.fas.fa-image
+                  %i.fas.fa-file-upload.add
+              // id "file"をつけ、「display:none;」で隠す
+              = f.file_field :image, class: "image", style: "display:none;", id: "file"
+            .secondary
+              .coodinate_detail
+                .section_sub
+                  %h2 コーディネート詳細
+                .section_main
+                  .list.summary
+                    %h3 コーディネート紹介文
+                    .detail
+                      = f.text_area :item_detail, class: "coodinate_summary"
+          .processing
+            %li.upload
+              = f.submit value: "UPLOAD", class: "over"
