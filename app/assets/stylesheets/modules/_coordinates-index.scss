@@ -306,22 +306,6 @@
               border: 1px #ddd solid;
               background: white;
               position: relative;
-              .rank {
-                position: absolute;
-                left: 8px;
-                top: 8px;
-                z-index: 3;
-                font-size: 14px;
-                line-height: 25px;
-                width: 25px;
-                height: 25px;
-                border: 2px #666 solid;
-                background: rgba(0, 0, 0, 0.8);
-                text-align: center;
-                color: white;
-                border-radius: 50%;
-                border-color: #ffe400;
-              }
               .image_container {
                 background: #eaeaea;
                 .img {
