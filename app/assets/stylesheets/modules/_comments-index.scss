@@ -1,0 +1,65 @@
+.comments-index {
+  background: #f6f7f8;
+  height: 3000px;
+  #main {
+    padding: 54px 0 0 0;
+    #gbl_title {
+      padding-top: 18px;
+      background: white;
+      min-height: 84px;
+      border-bottom: 1px #ddd solid;
+      position: relative;
+      #gbl_title_container {
+        width: 990px;
+        margin: 0 auto;
+      }
+      #user_header {
+        padding: 12px 0;
+        .container {
+          width: 990px;
+          margin: 0 auto;
+          display: flex;
+          .avatar {
+            height: 48px;
+            img {
+              width: 48px;
+              height: 48px;
+              border-radius: 50%;
+            }
+          }
+          .content {
+            padding-left: 10px;
+            .name {
+              font-size: 20px;
+              line-height: 1.2;
+              max-width: 100%;
+            }
+            .meta {
+              .info {
+                padding-top: 4px;
+                display: flex;
+                font-size: 12px;
+                position: absolute;
+                li:nth-child(2) {
+                  margin-left: 18px;
+                }
+                li:nth-child(2):before {
+                  content: "";
+                  width: 1px;
+                  height: 14px;
+                  background: #ddd;
+                  position: absolute;
+                  left: 50px;
+                  top: 30%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #gbl_body {
+
+    }
+  }
+}
