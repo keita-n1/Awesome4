@@ -1,0 +1,57 @@
+%section#ranking
+  %h2.title ランキング
+  %ol.ranking_image
+    %li
+      %p.rank 1
+      .image_container
+        %p.img
+          = link_to image_tag('//cdn.wimg.jp/coordinate/rtmg6b/20190710140809458/20190710140809458_320.jpg'), root_path
+      .profile
+        .content
+          .sub
+            %p.img
+              =link_to image_tag("//cdn.wimg.jp/profile/rtmg6b/20190709174938878_32.jpg", width: "32", height: "32"), root_path
+          .main
+            %p.name keita
+            %p.height 178cm
+        .like_container
+          %p.awesome Awesome
+          %i.far.fa-heart
+          %p.like 1045
+    %li
+      %p.rank 2
+      .image_container
+        %p.img
+          = link_to image_tag('//cdn.wimg.jp/coordinate/rtmg6b/20190710140809458/20190710140809458_320.jpg', width: '246', height: '328'), root_path
+      .profile
+        .content
+          .sub
+            %p.img
+              =link_to image_tag("//cdn.wimg.jp/profile/rtmg6b/20190709174938878_32.jpg", width: "32", height: "32"), root_path
+          .main
+            %p.name keita
+            %p.height 178cm
+        .like_container
+          %p.awesome Awesome
+          %i.far.fa-heart
+          %p.like 972
+    %li
+      %p.rank 3
+      .image_container
+        %p.img
+          = link_to image_tag('//cdn.wimg.jp/coordinate/rtmg6b/20190710140809458/20190710140809458_320.jpg', width: '246', height: '328'), root_path
+      .profile
+        .content
+          .sub
+            %p.img
+              =link_to image_tag("//cdn.wimg.jp/profile/rtmg6b/20190709174938878_32.jpg", width: "32", height: "32"), root_path
+          .main
+            %p.name keita
+            %p.height 178cm
+        .like_container
+          %p.awesome Awesome
+          %i.far.fa-heart
+          %p.like 873
+  %p.btn_more
+    = link_to 'もっと見る', '/', class: 'over'
+    
