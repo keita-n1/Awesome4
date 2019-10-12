@@ -9,11 +9,7 @@
       border: 1px #ddd solid;
       position: relative;
       #glb_title_container {
-        width: 990px;
-        margin: 0 auto;
-        .bread {
-          height: 27px;
-        }
+        @include breadcrumbs;
         .title_container {
           padding-top: 25px;
           .fa-camera-retro {
