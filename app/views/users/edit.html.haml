@@ -1,0 +1,72 @@
+= render 'header/header'
+.users-edit
+  %article#main
+    %header#glb_title
+      #glb_title_container 
+        .bread パンくず
+        .title_container
+          %i.fas.fa-camera-retro　コーディネート投稿
+    #glb_body
+      .content
+        = form_with(model: @user, local: true) do |f|
+          .upload_container
+            %section.upload_img
+              .section_sub
+                %h2 コーディネート画像
+                %span ※
+              .section_main
+                .sub
+                  .img_box
+                    %span NO IMAGE
+                .main
+                  %p.select 写真をアップロード
+            .secondary
+              .coodinate_detail
+                .section_sub
+                  %h2 コーディネート詳細
+                .section_main
+                  .list.summary
+                    %h3 コーディネート紹介文
+                    .detail
+                      = f.text_area :coodinate_summary, class: "coodinate_summary"
+                  .list.sex
+                    %h3 性別
+                    %span ※
+                    .detail
+                      %select#upload_sex{name: "upload_sex"}
+                        %option{value: "0"} 選択してください
+                        %option{value: "1"} MEN
+                        %option{value: "2"} WOMEN
+                  .list.height
+                    %h3 身長
+                    %span ※
+                    .detail
+                      %select#upload_height{name: "upload_height"}
+                        %option{value: "0"} 選択してください
+                        %option{value: "1"} 140cm
+                        %option{value: "2"} 145cm
+                        %option{value: "3"} 150cm
+                        %option{value: "4"} 155cm
+                        %option{value: "5"} 160cm
+                        %option{value: "6"} 165cm
+                        %option{value: "7"} 170cm
+                        %option{value: "8"} 175cm
+                        %option{value: "9"} 180cm
+                        %option{value: "10"} 185cm
+                        %option{value: "11"} 190cm
+                  .list.age
+                    %h3 年齢
+                    %span ※
+                    .detail
+                      %select#upload_age{name: "upload_age"}
+                        %option{value: "0"} 選択してください
+                        %option{value: "1"} 10代
+                        %option{value: "2"} 20代
+                        %option{value: "3"} 30代
+                        %option{value: "4"} 40代
+                        %option{value: "5"} 50代
+                        %option{value: "6"} 60代
+          .processing
+            %li.upload
+              = link_to "UPLOAD", "/", class: "over" 
+              
