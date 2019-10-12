@@ -1,11 +1,12 @@
 .coordinates-index {
   background: #f6f7f8;
   height: 2000px;
-  header {
+  #header {
     width: 100%;
     position: fixed;
     z-index: 100;
     background: white;
+    opacity: 0.8;
     .container {
       position: relative;
       width: 990px;
@@ -60,6 +61,41 @@
           top: 50%;
           display: block;
           margin: -7px 0 0 0;
+        }
+      }
+    }
+  }
+  #main {
+    padding: 54px 0 0 0;
+    width: 100%;
+    position: relative;
+    .switch_sex_type {
+      background: white;
+      border: 1px #ddd solid;
+      height: 40px;
+      nav {
+        width: 990px;
+        margin: 0 auto;
+        ul {
+          text-align: left;
+          .all_current {
+            @include switch_sex_type_nav;
+            a {
+              @include link_button($color: #FFCC00);
+            }
+          }
+          .men {
+            @include switch_sex_type_nav;
+            a {
+              @include link_button($color: #0099FF);
+            }
+          }
+          .women {
+            @include switch_sex_type_nav;
+            a {
+              @include link_button($color: #FF6699);
+            }
+          }
         }
       }
     }
