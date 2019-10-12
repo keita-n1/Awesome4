@@ -1,5 +1,6 @@
 class CoordinatesController < ApplicationController
   def index
+    @coordinates = Coordinate.includes(:user).order("created_at DESC").limit(30)
   end
 
   def new

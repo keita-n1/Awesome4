@@ -27,14 +27,7 @@
         %span コーディネート
       .content
         %ul.list_container
-          %li.list
-            .list__image
-              = image_tag '//cdn.wimg.jp/profile/o3v49k/20180630190139161_200.jpg', class: 'img', width: '230', height: '308'
-            .list__meta
-              %i.far.fa-heart 111
-          %li.list
-            .list__image
-              = image_tag '//cdn.wimg.jp/profile/o3v49k/20180630190139161_200.jpg', class: 'img', width: '230', height: '308'
-            .list__meta
-              %i.far.fa-heart 111 
-              
+          - @users.each do |user|
+            %li.list
+              .list__image
+                = link_to image_tag(user.image.to_s, class: 'img', width: '230', height: '308'), user_coordinate_comments_path(@user.id, user.id) 

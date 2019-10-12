@@ -1,159 +1,15 @@
 .coordinates-index {
   background: #f6f7f8;
+  min-height: 1500px;
   #main {
     padding: 54px 0 0 0;
     width: 100%;
     position: relative;
-    #switch_sex_type {
-      background: white;
-      border: 1px #ddd solid;
-      height: 40px;
-      nav {
-        width: 990px;
-        margin: 0 auto;
-        ul {
-          text-align: left;
-          .all_current {
-            @include switch_sex_type_nav;
-            a {
-              @include link_button($color: #FFCC00);
-            }
-          }
-          .men {
-            @include switch_sex_type_nav;
-            a {
-              @include link_button($color: #0099FF);
-            }
-          }
-          .women {
-            @include switch_sex_type_nav;
-            a {
-              @include link_button($color: #FF6699);
-            }
-          }
-        }
-      }
-    }
     #glb_body {
       #content {
         margin: 30px auto 0px auto;
         padding-bottom: 50px;
         width: 800px;
-        #ranking {
-          clear: both;
-          .title {
-            font-size: 18px;
-            color: #FFCC00;
-            font-weight: bold;
-          }
-          .ranking_image {
-            display: flex;
-            li {
-              justify-content: flex-start;
-              margin: 18px 0 0 18px;
-              border: 1px #ddd solid;
-              background: white;
-              position: relative;
-              .rank {
-                position: absolute;
-                left: 8px;
-                top: 8px;
-                z-index: 3;
-                font-size: 14px;
-                line-height: 25px;
-                width: 25px;
-                height: 25px;
-                border: 2px #666 solid;
-                background: rgba(0, 0, 0, 0.8);
-                text-align: center;
-                color: white;
-                border-radius: 50%;
-                border-color: #ffe400;
-              }
-              .image_container {
-                background: #eaeaea;
-                .img {
-                  img {
-                    vertical-align: bottom;
-                    height: 328px;
-                    width: 246px;
-                  }
-                }
-              }
-              .profile {
-                padding: 10px;
-                .content {
-                  width: 156px;
-                  float: left;
-                  .sub {
-                    width: 32px;
-                    float: left;
-                    .img {
-                      img {
-                        border-radius: 50%;
-                        border: 1px #ddd solid;
-                      }
-                    }
-                  }
-                  .main {
-                    width: 114px;
-                    float: right;
-                    .name {
-                      font-size: 13px;
-                      line-height: 1.2;
-                      font-weight: bold;
-                    }
-                    .height {
-                      font-size: 11px;
-                      line-height: 1.2;
-                      margin-top: 3px;
-                    }
-                  }
-                }
-                .like_container {
-                  float: right;
-                  width: 64px;
-                  .awesome {
-                    font-size: 13px;
-                    line-height: 1.2;
-                    color: #99FFCC;
-                    font-weight: bold;
-                  }
-                  .far {
-                    font-size: 11px;
-                    line-height: 1.2;
-                    margin-top: 3px;
-                    float: left;
-                    color: #FF6699;
-                    font-weight: bold;
-                  }
-                  .like {
-                    font-size: 11px;
-                    line-height: 1.2;
-                    margin-top: 3px;
-                    float: right;
-                  }
-                }
-              }
-            }
-          }
-          .btn_more {
-            width: 112px;
-            font-size: 12px;
-            margin-top: 12px;
-            float: right;
-            padding: 10px 0 10px 0;
-            text-align: center;
-            text-decoration: none;
-            font-weight: bold;
-            border: 1px #ddd solid;
-            border-radius: 2px;
-            .over {
-              text-decoration: none;
-              color: #888;
-            }
-          }
-        }
         #new_arrival {
           padding-top: 10px;
           clear: both;
@@ -164,78 +20,6 @@
           }
           .new_arrival_image {
             overflow:hidden;
-            .large {
-              float: left;
-              margin: 18px 0 0 18px;
-              border: 1px #ddd solid;
-              background: white;
-              position: relative;
-              .image_container {
-                background: #eaeaea;
-                .img {
-                  img {
-                    vertical-align: bottom;
-                    height: 506px;
-                    width: 379px;
-                  }
-                }
-              }
-              .profile {
-                padding: 10px;
-                .content {
-                  width: 290px;
-                  float: left;
-                  .sub {
-                    width: 32px;
-                    float: left;
-                    .img {
-                      img {
-                        border-radius: 50%;
-                        border: 1px #ddd solid;
-                      }
-                    }
-                  }
-                  .main {
-                    width: 248px;
-                    float: right;
-                    .name {
-                      font-size: 13px;
-                      line-height: 1.2;
-                      font-weight: bold;
-                    }
-                    .height {
-                      font-size: 11px;
-                      line-height: 1.2;
-                      margin-top: 3px;
-                    }
-                  }
-                }
-                .like_container {
-                  float: right;
-                  width: 64px;
-                  .awesome {
-                    font-size: 13px;
-                    line-height: 1.2;
-                    color: #99FFCC;
-                    font-weight: bold;
-                  }
-                  .far {
-                    font-size: 11px;
-                    line-height: 1.2;
-                    margin-top: 3px;
-                    float: left;
-                    color: #FF6699;
-                    font-weight: bold;
-                  }
-                  .like {
-                    font-size: 11px;
-                    line-height: 1.2;
-                    margin-top: 3px;
-                    float: right;
-                  }
-                }
-              }
-            }
             li {
               float: left;
               margin: 18px 0 0 18px;
@@ -290,20 +74,6 @@
                     line-height: 1.2;
                     color: #99FFCC;
                     font-weight: bold;
-                  }
-                  .far {
-                    font-size: 11px;
-                    line-height: 1.2;
-                    margin-top: 3px;
-                    float: left;
-                    color: #FF6699;
-                    font-weight: bold;
-                  }
-                  .like {
-                    font-size: 11px;
-                    line-height: 1.2;
-                    margin-top: 3px;
-                    float: right;
                   }
                 }
               }

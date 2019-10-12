@@ -1,132 +1,22 @@
 %section#new_arrival
   %h2.title NEW
   %ul.new_arrival_image
-    %li.large
-      .image_container
-        %p.img
-          = link_to image_tag('//cdn.wimg.jp/coordinate/rtmg6b/20190710140809458/20190710140809458_320.jpg'), root_path
-      .profile
-        .content
-          .sub
-            %p.img
-              =link_to image_tag("//cdn.wimg.jp/profile/rtmg6b/20190709174938878_32.jpg", width: "32", height: "32"), root_path
-          .main
-            %p.name keita
-            %p.height 178cm
-        .like_container
-          %p.awesome Awesome
-          %i.far.fa-heart
-          %p.like 1045
-    %li.large
-      .image_container
-        %p.img
-          = link_to image_tag('//cdn.wimg.jp/coordinate/rtmg6b/20190710140809458/20190710140809458_320.jpg'), root_path
-      .profile
-        .content
-          .sub
-            %p.img
-              =link_to image_tag("//cdn.wimg.jp/profile/rtmg6b/20190709174938878_32.jpg", width: "32", height: "32"), root_path
-          .main
-            %p.name keita
-            %p.height 178cm
-        .like_container
-          %p.awesome Awesome
-          %i.far.fa-heart
-          %p.like 1045
-    %li
-      .image_container
-        %p.img
-          = link_to image_tag('//cdn.wimg.jp/coordinate/rtmg6b/20190710140809458/20190710140809458_320.jpg'), root_path
-      .profile
-        .content
-          .sub
-            %p.img
-              =link_to image_tag("//cdn.wimg.jp/profile/rtmg6b/20190709174938878_32.jpg", width: "32", height: "32"), root_path
-          .main
-            %p.name keita
-            %p.height 178cm
-        .like_container
-          %p.awesome Awesome
-          %i.far.fa-heart
-          %p.like 1045
-    %li
-      .image_container
-        %p.img
-          = link_to image_tag('//cdn.wimg.jp/coordinate/rtmg6b/20190710140809458/20190710140809458_320.jpg'), root_path
-      .profile
-        .content
-          .sub
-            %p.img
-              =link_to image_tag("//cdn.wimg.jp/profile/rtmg6b/20190709174938878_32.jpg", width: "32", height: "32"), root_path
-          .main
-            %p.name keita
-            %p.height 178cm
-        .like_container
-          %p.awesome Awesome
-          %i.far.fa-heart
-          %p.like 1045
-    %li
-      .image_container
-        %p.img
-          = link_to image_tag('//cdn.wimg.jp/coordinate/rtmg6b/20190710140809458/20190710140809458_320.jpg'), root_path
-      .profile
-        .content
-          .sub
-            %p.img
-              =link_to image_tag("//cdn.wimg.jp/profile/rtmg6b/20190709174938878_32.jpg", width: "32", height: "32"), root_path
-          .main
-            %p.name keita
-            %p.height 178cm
-        .like_container
-          %p.awesome Awesome
-          %i.far.fa-heart
-          %p.like 1045
-    %li
-      .image_container
-        %p.img
-          = link_to image_tag('//cdn.wimg.jp/coordinate/rtmg6b/20190710140809458/20190710140809458_320.jpg'), root_path
-      .profile
-        .content
-          .sub
-            %p.img
-              =link_to image_tag("//cdn.wimg.jp/profile/rtmg6b/20190709174938878_32.jpg", width: "32", height: "32"), root_path
-          .main
-            %p.name keita
-            %p.height 178cm
-        .like_container
-          %p.awesome Awesome
-          %i.far.fa-heart
-          %p.like 1045
-    %li
-      .image_container
-        %p.img
-          = link_to image_tag('//cdn.wimg.jp/coordinate/rtmg6b/20190710140809458/20190710140809458_320.jpg'), root_path
-      .profile
-        .content
-          .sub
-            %p.img
-              =link_to image_tag("//cdn.wimg.jp/profile/rtmg6b/20190709174938878_32.jpg", width: "32", height: "32"), root_path
-          .main
-            %p.name keita
-            %p.height 178cm
-        .like_container
-          %p.awesome Awesome
-          %i.far.fa-heart
-          %p.like 1045
-    %li
-      .image_container
-        %p.img
-          = link_to image_tag('//cdn.wimg.jp/coordinate/rtmg6b/20190710140809458/20190710140809458_320.jpg'), root_path
-      .profile
-        .content
-          .sub
-            %p.img
-              =link_to image_tag("//cdn.wimg.jp/profile/rtmg6b/20190709174938878_32.jpg", width: "32", height: "32"), root_path
-          .main
-            %p.name keita
-            %p.height 178cm
-        .like_container
-          %p.awesome Awesome
-          %i.far.fa-heart
-          %p.like 1045 
-          
+    - @coordinates.each do |coordinate|
+      %li
+        .image_container
+          %p.img
+            = link_to image_tag(coordinate.image.to_s), user_coordinate_comments_path(coordinate.user_id, coordinate.id)
+        .profile
+          .content
+            .sub
+              %p.img
+                - if coordinate.user.profile_image.present?
+                  = link_to image_tag(coordinate.user.profile_image.to_s, width: "32", height: "32"), user_path(coordinate.user.id)
+                - else 
+                  = link_to image_tag('http://www.ark-wave.co.jp/contnt/bowler/img/no_image.jpg', width: "32", height: "32"), root_path
+            .main
+              %p.name #{coordinate.user.name}
+              %p.height #{coordinate.user.height}cm
+          .like_container
+            %p.awesome Awesome
+            

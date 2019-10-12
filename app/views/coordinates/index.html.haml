@@ -1,17 +1,7 @@
 = render 'header/header'
 .coordinates-index
   %article#main
-    #switch_sex_type
-      %nav
-        %ul
-          %li.all_current
-            = link_to "ALL", "/"
-          %li.men
-            = link_to "MEN", "/"
-          %li.women
-            = link_to "WOMEN", "/" 
     #glb_body
       #content
-        = render 'ranking'
         = render 'new_arrival'
         

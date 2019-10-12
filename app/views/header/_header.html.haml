@@ -4,12 +4,16 @@
       = link_to "Awesome", "/", class: "icon_font"
     - if user_signed_in?
       .user
-        %p.img
-          = link_to image_tag("//cdn.wimg.jp/profile/rtmg6b/20190709174938878_32.jpg", width: "32", height: "32", class: "image"), root_path
+        - if current_user.profile_image.to_s.present?
+          %p.img
+            = link_to image_tag(current_user.profile_image.to_s, width: "32", height: "32", class: "image"), user_path(current_user)
+        - else
+          %p.img
+            = link_to image_tag("http://www.ark-wave.co.jp/contnt/bowler/img/no_image.jpg", width: "32", height: "32", class: "image"), user_path(current_user)
         %p.current_user-name
           = current_user.name
         %p.post 
-          = link_to '投稿する', root_path, method: :get, class: "post_button"
+          = link_to '投稿する', new_user_coordinate_path(current_user), method: :get, class: "post_button"
         %p.logout
           = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout_button"
     - else

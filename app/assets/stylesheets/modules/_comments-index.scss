@@ -1,5 +1,5 @@
 .comments-index {
-  background: #f6f7f8;
+  background: $glay;
   #main {
     padding: 54px 0 50px 0;
     #gbl_title {
@@ -9,7 +9,7 @@
       border-bottom: 1px #ddd solid;
       position: relative;
       border: 1px #ddd solid;
-      #gbl_title_container {
+      #glb_title_container {
         width: 990px;
         margin: 0 auto;
       }
@@ -71,46 +71,48 @@
           background:white;
           border-radius: 20px;
           border: 1px #ddd solid;
+          .comment {
+            width: 330px;
+            margin-left: 18px;
+            background: #FFCCCC;
+            border-radius: 10px;
+            border: #ddd;
+          }
           .like_container {
             display: flex;
             margin: 10px;
-            .awesome {
-              font-size: 22px;
-              line-height: 1.2;
-              color: #99FFCC;
-              font-weight: bold;
-            }
-            .far {
-              font-size: 18px;
-              line-height: 1.2;
-              margin: 3px 0 0 30px;
-              color: #FF6699;
-              font-weight: bold;
-            }
-            .like {
-              font-size: 18px;
-              line-height: 1.2;
-              margin-top: 3px;
-
+            li {
+              list-style: none;
+              display: flex;
+              line-height: 28px;
+              .awesome {
+                font-size: 22px;
+                line-height: 1.2;
+                color: #99FFCC;
+                font-weight: bold;
+                margin-right: 170px;
+              }
             }
           }
           //吹き出し文
           .comments {
-            padding: 20px 10px;
             max-width: 394px;
-            margin: 15px auto;
+            margin: 30px auto;
             text-align: right;
             font-size: 14px;
-
             .balloon6 {
               width: 100%;
-              margin: 10px 0;
+              margin: 30px 0;
               overflow: hidden;
             }
             .balloon6 .faceicon {
               float: left;
               margin-right: -50px;
               width: 40px;
+              .img {
+                height: 40px;
+                width: 40px;
+              }
             }
             .balloon6 .faceicon img{
               width: 100%;
@@ -174,15 +176,13 @@
         .content_sub {
           width: 558px;
           float: left;
+          .coodinate_img {
+            height: 743px;
+          }
           .coodinate_info {
             background: white;
             border: 1px #ddd solid;
             padding: 20px 0 13px 20px;
-            &__title {
-              font-size: 14px;
-              font-weight: bold;
-              line-height: 1.5;
-            }
             ul {
               display: flex;
               margin-top: 10px;
@@ -207,36 +207,15 @@
             }
             ul {
               display: flex;
-              .more_img_1 {
+              .more_img {
                 border: 1px #ddd solid;
                 margin-top: 18px;
-                width: 174px;
+                width: 172px;
+                height: 225px;
                 background: white;
-                .like_container {
-                  display: flex;
-                  .far {
-                    font-size: 18px;
-                    line-height: 1.2;
-                    margin: 3px 10px 3px 6px;
-                    color: #FF6699;
-                    font-weight: bold;
-                  }
-                }
-              }
-              .more_img_2 {
-                border: 1px #ddd solid;
-                margin: 18px 0 0 18px;
-                width: 174px;
-                background: white;
-                .like_container {
-                  display: flex;
-                  .far {
-                    font-size: 18px;
-                    line-height: 1.2;
-                    margin: 3px 10px 3px 6px;
-                    color: #FF6699;
-                    font-weight: bold;
-                  }
+                margin-right: 18px;
+                .img {
+                  margin: 0px;
                 }
               }
             }
