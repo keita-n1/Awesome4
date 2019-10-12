@@ -23,6 +23,42 @@
         font-size: 24px;
       }
     }
+    .user {
+      position: absolute;
+      right: 0;
+      top: 16px;
+      text-align: right;
+
+      .img {
+        display: inline-block;
+        vertical-align: middle;
+        .image {
+          border-radius: 50%;
+        }
+      }
+      .current_user-name {
+        display: inline-block;
+        margin-left: 10px;
+      }
+      .post {
+        display: inline-block;
+        margin-left: 30px;
+        .post_button {
+          text-decoration: none;
+          color: black;
+          font-size: 14px;
+        }
+      }
+      .logout {
+        display: inline-block;
+        margin-left: 30px;
+        .logout_button {
+          text-decoration: none;
+          color: black;
+          font-size: 14px;
+        }
+      }
+    }
     .no_login {
       position: absolute;
       right: 0;
